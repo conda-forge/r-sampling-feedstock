@@ -15,7 +15,8 @@ source:
   sha256: 356923f35971bb55f7e97b178aede3366374aa3ad3d24a97be765660553bf21a
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -23,18 +24,18 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+  host:
     - r-base
     - r-mass
     - r-lpsolve
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
 
   run:
     - r-base
     - r-mass
     - r-lpsolve
-    - libgcc  # [not win]
 
 test:
   commands:
