@@ -1,4 +1,4 @@
-{% set version = '2.8' %}
+{% set version = "2.9" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/sampling_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/sampling/sampling_{{ version }}.tar.gz
-  sha256: 356923f35971bb55f7e97b178aede3366374aa3ad3d24a97be765660553bf21a
+  sha256: 7f5ba5978f6cdbbbdb6f51958197b28b6fc63e7eeee59e6845ea09fb37d1b187
 
 build:
-  merge_build_host: True  # [win]
-  number: 1003
+  merge_build_host: true  # [win]
+  number: 0
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -47,7 +47,7 @@ about:
   license: GPL (>= 2)
   summary: Functions for drawing and calibrating samples.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
