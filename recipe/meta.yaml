@@ -44,7 +44,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=sampling
-  license: GPL (>= 2)
+  license: GPL (>= 2
   summary: Functions for drawing and calibrating samples.
   license_family: GPL3
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
