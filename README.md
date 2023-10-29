@@ -3,6 +3,7 @@ About r-sampling-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-sampling-feedstock/blob/main/LICENSE.txt)
 
+
 About r-sampling
 ----------------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=sampling
 Package license: GPL-2.0-or-later
 
 Summary: Functions for drawing and calibrating samples.
+
 About r-sampling
 ----------------
 
